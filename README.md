@@ -1,8 +1,6 @@
 # UCSB PaCE Introduction to Python
 
 ## Instructions for Submitting Weekly Homework Assignments
-* Create a clone of this repository on your desktop using the [Github Desktop App](https://desktop.github.com/)
-* Create a new branch named using the week number and your Github username. For example, for Week 2 assignments, I would use `git checkout -b week2-julienisbet`
-* Create a new file in the Weekly folder using the same naming convention `week2-julienisbet.py`
-* Create a Pull Request for that week's assignment
-* Look at other students solutions and comment on their pull requests
+Register for the class' repl.it classroom [here](https://repl.it/classroom/invite/f2KGFLN)
+All assignments will be published on the day of class. The number of assignments will vary depending on what we cover that day.
+Assignments are meant to help you practice and for my benefit to determine how well the class is picking up the concepts -- do not worry if you are unable to finish all of them.
