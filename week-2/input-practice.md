@@ -40,3 +40,10 @@ Thank you, please enter your eye color.
 <second input>
 Hello, Julie. You have blue eyes.
 ```
+
+### Extra Problems
+* Modify your program for returning area of a rectangle to instead return the area of a triangle
+* Modify your program for returning the area of a rectangle so that instead of the input being two consecutive integers, it accepts a single input with the two integers separated by a space. How would you process this input to still return the area of the rectangle?
+__SAMPLE INPUT__
+2 4
+* Similarly, modify your program that prints name and eye color to only accept a single input value
