@@ -9,7 +9,8 @@ HELLO!
 should("loud noises")
 LOUD NOISES!
 
-* Add an optional argument that allows you to change the punctuation at the end. If no argument is given, it will default to an exlamation point
+* Add an optional argument that allows you to change the punctuation at the end.
+* If no argument is given, it will default to an exlamation point
 
 shout("hello")
 HELLO!
