@@ -1,9 +1,5 @@
-# BACKGROUND COLOR: #9EC388
-# CRUST COLOR: #ECA84F
-# PEPPERONI / SAUCE: #AD0509
-# CHEESE: #FBC70F
-
 import turtle
+
 BACKGROUND_COLOR = "#9EC388"
 CRUST_COLOR = "#ECA84F"
 SAUCE_COLOR = "#AD0509"
@@ -29,11 +25,8 @@ screen.bgcolor(BACKGROUND_COLOR)
 screen.title("My Pizza")
 
 my_turtle = turtle.Turtle()
-print(my_turtle.heading())
-# my_turtle.left(45)
-print(my_turtle.heading())
 my_turtle.pensize(5)
-# my_turtle.speed(0)
+my_turtle.speed(0)
 my_turtle.shape("circle")
 
 def draw_circle(radius, line_color, fill_color):
@@ -56,20 +49,6 @@ draw_circle(125, SAUCE_COLOR, CHEESE_COLOR)
 for location in PEPPERONI_LOCATIONS:
     move_turtle(location[0], location[1])
     draw_circle(10, SAUCE_COLOR, SAUCE_COLOR)
-
-
-##move_turtle(0, 150)
-##my_turtle.color(SAUCE_COLOR)
-##for r in range(0,5):
-##    for x in range(0, 16):
-##        my_turtle.pensize(5 - r)
-##        my_turtle.penup()
-##        my_turtle.left(22.5)
-##        my_turtle.forward(100 - r*20)
-##        my_turtle.pendown()
-##        my_turtle.stamp()
-##        my_turtle.penup()
-##        my_turtle.backward(100 - r*20)
 
 
 move_turtle(0, 150)
