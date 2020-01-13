@@ -1,6 +1,0 @@
-# reading data from text file
-# data storage types (csv, json, xml)
-# reading data from CSV
-# reading data from JSON
-# writing data to JSON
-# reading data from API
