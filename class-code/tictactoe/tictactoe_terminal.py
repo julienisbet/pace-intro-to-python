@@ -1,5 +1,4 @@
-# PSEUDOCODE
-# create a variable board initialize with dictionary with 9 keys 1-9
+# PSEUDOCODE # create a variable board initialize with dictionary with 9 keys 1-9
 # create variable called active, set to true
 # create a variable current_player, set to 'X', create variable next_player set it to 'O'
 # while active is true

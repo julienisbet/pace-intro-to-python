@@ -26,10 +26,17 @@ def print_board(b):
   ''')
 
 def check_winner(b, player):
-  pass
+  return (
+    b['1'] == b['2'] == b['3'] == player or
+    b['4'] == b['5'] == b['6'] == player or
+    b['7'] == b['8'] == b['9'] == player or
+    b['1'] == b['4'] == b['7'] == player or
+    b['2'] == b['5'] == b['8'] == player or
+    b['3'] == b['6'] == b['9'] == player or
+    b['1'] == b['5'] == b['9'] == player or
+    b['3'] == b['5'] == b['7'] == player
+    )
 
-def check_board_full(b):
-  pass
 
 # print_board(game_board)
 # game_board['1'] = 'X'
@@ -47,18 +54,22 @@ for s in SPACES:
 
 while active:
   print_board(game_board)
-  valid_move = False
-  while not valid_move:
-    space = input("Please enter a space 1-9 \n")
+  waiting_for_valid_input = True
+  while waiting_for_valid_input:
+    space = input(f"{current_player}'s move\n Please enter a space 1-9 \n")
     if space in SPACES and game_board[space] == " ":
       game_board[space] = current_player
-      valid_move = True
+      waiting_for_valid_input = False
     else:
       print("Sorry, that's not a valid space. Please try again.")
+
   if check_winner(game_board, current_player):
-    print("yay")
-  elif check_board_full(game_board):
-    print("boo")
+    print(f"Yay! {current_player} WINS!")
+    active = False
+  elif not ' ' in game_board.values():
+    print("Scratch Game!!")
+    print_board(game_board)
+    active = False
   else:
     current_player, next_player = next_player, current_player
 
