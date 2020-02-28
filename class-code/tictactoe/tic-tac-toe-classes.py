@@ -24,6 +24,9 @@ class Coordinate:
 
     return(x_quad, y_quad)
 
+  def drawing_coordinate(self):
+    return Coordinate(self.quadrant()[0]*200, self.quadrant()[1]*200 - 36)
+
 class GameBoard:
   '''Controls Game Board'''
 
@@ -92,10 +95,8 @@ class TicTacToe():
 
   def record_move(self, x, y):
     click = Coordinate(x, y)
-    drawing_coordinate = Coordinate(click.quadrant()[0]*200, click.quadrant()[1]*200 - 36)
-  
     if self.board_state[click.quadrant()] == " ":
-      self.board.write(self.current_player, drawing_coordinate)
+      self.board.write(self.current_player, click.drawing_coordinate())
       self.board_state[click.quadrant()] = self.current_player
       if self.current_player_is_winner():
         self.board.write(f"{self.current_player} WINS!", Coordinate(0, -300))
