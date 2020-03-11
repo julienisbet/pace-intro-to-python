@@ -1,18 +1,25 @@
-# http://api.openweathermap.org/data/2.5/weather?q=Goleta&APPID=bc406a21e03e694e8d239386b3b83d53
-# python3 -m pip install --user requests
-# import requests, json
-# API_KEY = "YOUR KEY HERE"
-# BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
+# run the following in the terminal
+# python -m pip install --user requests
 
-# city_name = 'Goleta'
-# complete_url = BASE_URL + "appid=" + API_KEY + "&q=" + city_name
-# response = requests.get(complete_url)
-# data = response.json()
+import requests, json
+API_KEY = YOUR_KEY_HERE
+BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
 
-import requests
+city_name = 'Goleta'
+complete_url = BASE_URL + "appid=" + API_KEY + "&q=" + city_name
+print(complete_url)
+print("\n\n\n")
+response = requests.get(complete_url)
+data = response.json()
+# print(data)
+print(data["coord"])
 
-url = "https://restcountries.eu/rest/v2/name/united%20states%20of%20america"
 
-response = requests.get(url)
+astros_url = "http://api.open-notify.org/astros.json"
 
-print(response.json()[0]['name'])
+response = requests.get(astros_url).json()
+print(f"There are currently {response['number']} astronauts on the ISS:")
+for astro in response["people"]:
+  print(f"\t{astro['name']}")
+
+
