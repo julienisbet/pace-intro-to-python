@@ -1,3 +1,7 @@
+# I'm going to be talking a lot about data types in these first few weeks
+# when programming, we're generally going to be processing information
+# Python needs to know what type of information that is, in order to know what to do with it
+
 # Lets open up the Python shell in IDLE and play around with numbers.
 # The first type of number we'll work with is integers
 1

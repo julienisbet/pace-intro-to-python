@@ -9,9 +9,8 @@ print("My dog’s name is Benny. Benny is a very cute")
 # It would be very error-prone to do a find and replace on that word
 # Instead lets use a variable
 
-# Think of a variable as a box that we’re using the store information
-# We can give it a label so that we know what kind of information is in the box
-# We can also swap out the contents of the box as necessary
+# Think of a variable as a label that references a specific piece of information that is stored
+
 
 # In python, declaring variables is as simple as deciding on a name and then using a single equals sign to assign that variable a value.
 # In this example, let’s call our variable dog_name. We can now print that the same way that we printed other strings. 

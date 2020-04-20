@@ -7,6 +7,11 @@ for i in my_numbers:
 
 print(numbers_greater_than_five)
 
+# conditional operators
+# > < >= == !=
+# logical operators - used to combine multiple conditional statements
+# and or
+
 # i > 5 is called a conditional statement
 # conditionals result in the value true or false - in python, to represent true/false
 # lets go into the shell and play around with some other conditional statements
