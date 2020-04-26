@@ -16,62 +16,25 @@
     # else switch current player and next player
 
 
-def print_board(b):
-  print(f'''
-    {b['1']} | {b['2']} | {b['3']} 1 2 3
-    --+---+--
-    {b['4']} | {b['5']} | {b['6']} 4 5 6
-    --+---+--
-    {b['7']} | {b['8']} | {b['9']} 7 8 9
-  ''')
+board = {
+    '1': 'O',
+    '2': ' ',
+    '3': ' ',
+    '4': ' ',
+    '5': 'X',
+    '6': ' ',
+    '7': 'X',
+    '8': ' ',
+    '9': 'O'
+}
 
-def check_winner(b, player):
-  return (
-    b['1'] == b['2'] == b['3'] == player or
-    b['4'] == b['5'] == b['6'] == player or
-    b['7'] == b['8'] == b['9'] == player or
-    b['1'] == b['4'] == b['7'] == player or
-    b['2'] == b['5'] == b['8'] == player or
-    b['3'] == b['6'] == b['9'] == player or
-    b['1'] == b['5'] == b['9'] == player or
-    b['3'] == b['5'] == b['7'] == player
-    )
+def print_board():
+    print(f"""
+       {board['1']} | {board['2']} | {board['3']} 1 2 3
+       --+---+--
+       {board['4']} | {board['5']} | {board['6']} 4 5 6
+       --+---+--
+       {board['7']} | {board['8']} | {board['9']} 7 8 9
+    """)
 
-
-# print_board(game_board)
-# game_board['1'] = 'X'
-# game_board['5'] = 'O'
-# print(game_board)
-# print_board(game_board)
-
-active = True
-current_player = "X"
-next_player = "O"
-SPACES = list('123456789')
-game_board = {}
-for s in SPACES:
-  game_board[s] = " "
-
-while active:
-  print_board(game_board)
-  waiting_for_valid_input = True
-  while waiting_for_valid_input:
-    space = input(f"{current_player}'s move\n Please enter a space 1-9 \n")
-    if space in SPACES and game_board[space] == " ":
-      game_board[space] = current_player
-      waiting_for_valid_input = False
-    else:
-      print("Sorry, that's not a valid space. Please try again.")
-
-  if check_winner(game_board, current_player):
-    print(f"Yay! {current_player} WINS!")
-    active = False
-  elif not ' ' in game_board.values():
-    print("Scratch Game!!")
-    print_board(game_board)
-    active = False
-  else:
-    current_player, next_player = next_player, current_player
-
-
-
+print_board()
