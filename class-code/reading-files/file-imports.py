@@ -1,20 +1,24 @@
-import csv, os
+import csv
 import plotly.graph_objects as go
-import json
 
-my_file = open('ip-data.csv')
-data_reader = csv.reader(my_file)
+with open('ip-data.csv') as f:
+    raw_data = list(csv.DictReader(f))
+print(raw_data[0])
+print(raw_data[1])
 data = {}
-header = next(data_reader)
-for row in data_reader:
-  date = row[0]
-  login_count = int(row[-1])
-  if date in data.keys():
-    data[date] += login_count
-  else:
-    data[date] = login_count
-fig = go.Figure(data=go.Scatter(x=list(data.keys()), y=list(data.values())))
+for row in raw_data:
+    date = row['date']
+    if date in data.keys():
+        data[date] += int(row['f'])
+    else:
+        data[date] = int(row['f'])
+fig = go.Figure(data=go.Scatter(
+    x=list(data.keys()),
+    y=list(data.values())
+))
 fig.show()
+fig.write_html("ip-data.html")
+# fig.write_image("ip-data.png")
 
 # import csv
 # my_file = open('bluths.csv')
